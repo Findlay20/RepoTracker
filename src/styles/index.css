@@ -1,24 +1,33 @@
 :root {
     background-color: rgb(33, 36, 43);
-    /* color: white; */
     text-align: center;
+}
+
+h1 {
+    font-size: 40px;
 }
 
 header {
     font-size: 4vh;
-    /* border: 2px solid orange; */
-    padding: 10px;
-    /* color: red; */
+    padding: 20px 10px;
 }
 
 div #search {
-    /* border: 2px solid black; */
-    margin: 10px 0px;
-    padding: 10px;
+    padding-bottom: 14px;
+}
+
+div #search input {
+    background-color: rgb(49, 49, 65);
+    border: 1px solid whitesmoke;
+    color: white;
+}
+
+div #search input:last-child:hover {
+    color: gold
 }
 
 #searchBox {
-    margin-left: 4px;
+    margin-left: 10px;
 }
 
 div #results {
@@ -26,23 +35,22 @@ div #results {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    /* border: 6px green dotted; */
 }
 
 .result {
-    /* border: 2px pink dotted; */
-    background-color: rgba(58, 58, 58, 0.795);
+    /* border: 1px gold solid; */
+    background-color: rgba(58, 58, 58, 0.637);
     margin: 10px;
     min-width: 360px;
     max-width: fit-content;
-    height: 180px;
+    min-height: 180px;
     display: flex;
     justify-content: center;
-    padding: 8px;
+    padding: 30px;
 }
 
 .result a {
-    color: rgb(219, 187, 5);
+    color: gold;
 }
 
 .result a:hover {
