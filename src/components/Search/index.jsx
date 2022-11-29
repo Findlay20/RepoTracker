@@ -27,7 +27,7 @@ function Search () {
         console.log(searchResult)
         return <div id="results">
                 {searchResult.map(repo => <div className='result'>
-                <h1><a href={repo.url}>{repo.name}</a></h1>
+                <h1><a href={repo.html_url}>{repo.name}</a></h1>
                 <h3>Open issues: {repo.open_issues_count}</h3>
                 <h3>Stargazers: {repo.stargazers_count}</h3>
                 <h3>Forks: {repo.forks_count}</h3>
