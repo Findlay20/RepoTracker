@@ -26,7 +26,7 @@ function Search () {
     if (searchResult) {
         console.log(searchResult)
         return <div id="results">
-                {searchResult.forEach(repo => <div className='result'>
+                {searchResult.map(repo => <div className='result'>
                 <h1><a href={repo.url}>{repo.name}</a></h1>
                 <h3>Open issues: {repo.open_issues_count}</h3>
                 <h3>Stargazers: {repo.stargazers_count}</h3>
