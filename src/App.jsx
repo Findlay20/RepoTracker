@@ -3,7 +3,7 @@ import { Header, Search } from './components';
 
 function App() {
     return (
-        <div id="app">
+        <div id="app" className='bg-dark text-white'>
             <Header />
             <main>
                 <Search />
