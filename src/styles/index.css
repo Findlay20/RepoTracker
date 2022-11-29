@@ -3,3 +3,12 @@
     color: white;
     text-align: center;
 }
+
+header {
+    font-size: 3vh;
+    border: 2px solid black;
+}
+
+div#search {
+    border: 2px solid black;
+}

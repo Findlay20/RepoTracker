@@ -2,7 +2,17 @@ import React from 'react';
 
 function Search () {
     
-    return <h1>Search area</h1>
+    const [searchValue, setSearchValue] = useState()
+
+
+    
+    return <div id="search">
+        <h1>Search Section</h1>
+        <form onSubmit={handleSubmit}>
+            <input type="text" id="searchBox" required placeholder='Enter Github name...'/>
+            <input type="submit" value="Search"/>
+        </form>
+    </div>
 }
 
 export default Search;

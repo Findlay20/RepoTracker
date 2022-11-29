@@ -2,7 +2,10 @@ import React from 'react';
 
 function Header () {
     
-    return <h1>Header area</h1>
+    return <header>
+            <h1>RepoTracker</h1>
+        </header>
+
 }
 
 export default Header;
