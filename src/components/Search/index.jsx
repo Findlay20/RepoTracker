@@ -7,6 +7,7 @@ function Search () {
     
     const [searchValue, setSearchValue] = useState()
     const [searchResult, setSearchResult] = useState([]);
+    const [errMessage, setErrMessage] = useState("");
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -20,9 +21,17 @@ function Search () {
     }
 
     async function getRepositories(searchValue) {
-        const gitData = (await axios.get(`https://api.github.com/users/${searchValue}/repos`)).data
-        console.log(gitData)
-        setSearchResult(gitData)
+        try {
+            setErrMessage("")
+            const gitData = (await axios.get(`https://api.github.com/users/${searchValue}/repos`)).data
+            if (gitData.length === 0) {setErrMessage("User has no public repos")}
+            console.log(gitData)
+            setSearchResult(gitData)
+        } catch (err) {
+            console.warn(err)
+            setErrMessage("User can't be found.")
+        }
+
     }
  
 
@@ -45,6 +54,7 @@ function Search () {
                 <input type="text" id="searchBox" required placeholder='Enter Github name...' onChange={updateInput}/>
                 <input type="submit" value="Search"/>
             </form>
+            <p>{errMessage}</p>
         </div>
         {showResult(searchResult)}
     </>

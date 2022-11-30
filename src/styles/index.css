@@ -26,6 +26,10 @@ div #search input:last-child:hover {
     color: gold
 }
 
+div #search p {
+    color: red;
+}
+
 #searchBox {
     margin-left: 10px;
 }
