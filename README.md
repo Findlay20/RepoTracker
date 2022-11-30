@@ -15,7 +15,7 @@ Created a repo tracker that shows overview of the entered user's repo.
 ## Changelog
 - Added vite setup and basic react template
 - Added components
-- 
+- Added fetch api functionality
 - Added react bootstrap and updated css
 - Change render in main.jsx to up-to-date render
 
